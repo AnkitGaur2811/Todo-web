@@ -1,0 +1,51 @@
+<!-- Extends base -->
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %} Tasks {% endblock %}
+
+<!-- Navbar btn -->
+{% block navbtn%}
+<button id="logoutbtn" class="navbtn" ><a href="{{url_for('logout')}}">Logout</a></button>
+{%endblock%}
+
+<!-- Content -->
+{%block Main_content%}
+<div id="createtaskcontent">
+    <div id="createheading">
+        <h2>Create Task</h2>
+    </div>
+    <div id="createtaskinput">
+        <form  id ="createtaskform" action="{{url_for('createtask')}}" method="POST">
+            <!-- Title Field -->
+            {{form.title.label}}  {{form.title}}<br>
+            {% if form.title.errors %}
+                {% for error in form.title.errors %}
+                    <h6 class="error">{{error}}</h6>
+                {% endfor %}
+            {% endif %}
+            <br>
+            <!-- Status Field -->
+            {{form.status.label}}  {{form.status}}<br>
+            {% if form.status.errors %}
+                {% for error in form.status.errors %}
+                    <h6 class="error">{{error}}</h6>
+                {% endfor %}
+            {% endif %}
+            <br>
+            <!-- Desc Field -->
+            {{form.desc.label}}  {{form.desc}}<br>
+            {% if form.desc.errors %}
+                {% for error in form.desc.errors %}
+                    <h6 class="error">{{error}}</h6>
+                {% endfor %}
+            {% endif %}
+            <br>
+            <!-- Submit Field -->
+            {{form.csrf_token}}
+            {{form.submit}}
+            <br>
+        </form>
+    </div>
+</div>
+{%endblock%}

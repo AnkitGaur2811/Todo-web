@@ -1,0 +1,654 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Edu+NSW+ACT+Foundation:wght@600&family=Edu+TAS+Beginner:wght@600&family=Sahitya&display=swap');
+/* For Base file */
+/* CSS reset */
+*{
+    /* background-color:aqua; */
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+/* Navbar */
+#navbar{
+    border: 2px solid black;
+    background-color:#6E85B7;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:0;
+    height: 4rem;
+    font-family: 'Sahitya', serif;
+}
+#navbar #logo {
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+}
+#navbar #logo p{
+    font-size:2rem;
+    font-weight:bold;
+    color:black;
+}
+#navbar #logo .photo-logo{
+    height: 2.6rem;
+    width: auto; 
+}
+#navbar #main-pages {
+    /* border: 2px solid black; */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#navbar #main-pages li {
+    list-style: none;
+   
+}
+#navbar #main-pages li :hover {
+    background-color: black;
+    color:white;
+}
+#navbar #main-pages li a {
+    margin: 1rem;
+    padding:0.5rem 0.8rem;
+    font-size: 1.4rem;
+    font-weight:bolder;
+    border-radius: 1.3rem;
+    text-decoration: none;
+    color:black;
+}
+#navbar #btncontainer {
+    margin: 0.8rem;
+    padding:0.5rem 0rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+#navbar #btncontainer .navbtn {
+    margin: 0.2rem 0.5rem;
+    padding:0.3rem 0rem;
+    font-size: 1.4rem;
+    border-radius: 1.3rem;
+    background-color:#6E85B7;
+    font-family: 'Sahitya', serif;  
+}
+#navbar #btncontainer .navbtn  a {
+    padding:0.3rem 0.7rem;
+    font-size: 1.4rem; 
+    text-decoration: none;
+    border-radius: 1.3rem; 
+    color:black;
+    background-color:#6E85B7;
+}
+
+#navbar #btncontainer .navbtn:hover {
+    background-color: black;
+    color:white;  
+}
+#navbar #btncontainer .navbtn a:hover {
+    background-color: black;
+    color:white;  
+}
+
+/* Content */
+#content-container{
+    /* border: 2px solid black; */
+    background-image: url("home_content_back.jpg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:39.85rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #B2C8DF;
+}
+/* footer */
+#footer{
+    border: 2px solid black;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color: black;
+}
+#footer h5{
+    font-size: 0.8rem;
+    color:white;
+}
+/* For Home File */
+#content-container #contentbox{
+    border: 2px solid black;
+    margin:2rem;
+    padding:1rem;
+    height:20.5rem;
+    width: 50%;
+    border-radius:1.3rem;
+    background-color:rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+}
+#content-container #contentbox #heading-content{
+    /* border: 2px solid black; */
+    padding:1.5rem 2rem;
+    text-align:center;
+    font-size: 2.5rem;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+#content-container #contentbox .extracontent{
+    /* border: 2px solid black; */
+    padding:1.2rem ;
+    text-align:center;
+    font-size:1.25rem;
+    font-family: 'Courgette', cursive;
+}
+#content-container #contentbox #button-container{
+    /* border: 2px solid black; */
+    padding:1.5rem 2rem;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+#content-container #contentbox #button-container #or{
+    /* border: 2px solid black; */
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Courgette', cursive;
+}
+#content-container #contentbox #button-container .homebtn{
+    padding:0.5rem 0rem;
+    font-size: 1.5rem;
+    font-weight:bold;
+    text-decoration: none;
+    border-radius: 1.3rem;
+    background-color:black;
+    color: white;
+}
+#content-container #contentbox #button-container .homebtn:hover{
+    background-color:#6E85B7;
+    color:#F8F9D7;
+}
+
+#content-container #contentbox #button-container .homebtn .register{
+    text-decoration: none;
+    padding:0.5rem 0.9rem;
+    border-radius: 1.3rem;
+    background-color:black;
+    color: white;
+    font-family: 'Courgette', cursive;
+}
+#content-container #contentbox #button-container .homebtn .register:hover{
+    background-color:#6E85B7;
+    color:#F8F9D7;
+}
+/* About Us */
+#content-container #aboutcontent{
+    border: 2px solid black;
+    background-color:rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    width: 75%;
+    height:28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.3rem;
+}
+#content-container #aboutcontent #aboutheading{
+    /* border: 2px solid black; */
+    font-size: 4rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+#content-container #aboutcontent #mainabout{
+    /* border: 2px solid black; */
+    font-size: 1.5rem;
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    padding: 2.2rem 3rem;
+}
+#content-container #aboutcontent #contactinfo{
+    /* border: 2px solid black; */
+    font-size: 1.5rem;
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    font-weight: bolder;
+}
+#content-container #aboutcontent #contactinfo .head{
+    display: inline;  
+}
+#content-container #aboutcontent #contactinfo .cont{
+    display: inline; 
+    text-decoration: none;
+    color: black; 
+}
+/* How to use page */
+#content-container #how-to-usecontainer {
+    border: 2px solid black;
+    background-color:rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    height:35rem;
+    width:92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.3rem;
+
+}
+#content-container #how-to-usecontainer h2 {
+    font-size: 2.5rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+#content-container #how-to-usecontainer #cardcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.3rem;
+    width:100%;
+
+}
+#content-container #how-to-usecontainer .card{
+    border: 2px solid black;
+    height:27rem;
+    width:30%;
+    border-radius: 1.3rem;
+    box-shadow: 3px 3px 3px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#content-container #how-to-usecontainer .card:hover{
+    box-shadow: -3px -3px 3px black;
+}
+#content-container #how-to-usecontainer .card .cardimg{
+    height:12rem;
+    width:auto;
+    margin:0;
+    padding:0;
+}
+#content-container #how-to-usecontainer .card .cardhead{
+    font-size:2rem;
+    font-family: 'Courgette', cursive;
+}
+#content-container #how-to-usecontainer .card .cardcontent{
+    font-size:1.2rem;
+    font-family: cursive;
+    padding: 0.3rem;
+    text-align: center;
+}
+/* Login page */
+#content-container #logincontainer{
+    border: 2px solid black;
+    background-color:rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    height:20rem;
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.3rem;
+}
+#content-container #logincontainer #heading{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 2rem;
+}
+#content-container #logincontainer #inputs{
+    width:90%;
+    padding: 0;
+}
+#content-container #logincontainer #inputs h6{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 1.7rem;
+    text-align: center;
+}
+#content-container #logincontainer #inputs #loginform{
+    /* border: 1px solid black; */
+    /* display:grid;
+    grid-template-columns: auto auto;
+    gap: 0.2rem 0.3rem ; */
+    /* width:inherit; */
+    margin: 0;
+}
+#content-container #logincontainer #inputs #loginform .error{
+    /* border: 1px solid black; */
+    grid-column: 1/span 2;
+    
+}
+#content-container #logincontainer #inputs label{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 1.5rem;
+    text-align:center;
+    margin:0.5rem;
+    padding:0.5rem;
+    justify-content: center;
+}
+
+#content-container #logincontainer #inputs input{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 1.2rem;
+    text-align:center;
+    width:auto;
+    margin:0.5rem;
+    padding:0.5rem;
+    border-radius: 1.3rem;
+    width:25rem;
+}
+#content-container #logincontainer #inputs #loginform #email{
+    margin-left: 2.5rem;
+}
+#content-container #logincontainer #inputs input#submit{
+    font-size: 1.2rem;
+    text-align:center;
+    width:98%;
+    margin:0.5rem;
+    padding:0.5rem;
+    grid-column: 1/span 2;
+    border-radius: 1.3rem;
+    background-color:black;
+    color: white;
+    font-family: 'Courgette', cursive;
+}
+#content-container #logincontainer #inputs input#submit:hover{
+    background-color:#6E85B7;
+    color:#F8F9D7;
+}
+/* Signup page */
+#content-container #signupcontainer{
+    border: 2px solid black;
+    background-color:rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    height:35rem;
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.3rem;
+}
+#content-container #signupcontainer #heading{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 2rem;
+}
+#content-container #signupcontainer #inputs{
+    width:90%;
+    padding: 0;
+}
+#content-container #signupcontainer #inputs h6{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 1.7rem;
+    text-align: center;
+}
+#content-container #signupcontainer #inputs #signupform{
+    margin: 0;
+}
+#content-container #signupcontainer #inputs #signupform #password{
+    margin-left: 5.2rem;
+}
+#content-container #signupcontainer #inputs #signupform #phone{
+    margin-left: 7rem;
+}
+#content-container #signupcontainer #inputs #signupform #email{
+    margin-left: 7rem;
+}
+#content-container #signupcontainer #inputs #signupform #fullname{
+    margin-left: 7rem;
+}
+#content-container #signupcontainer #inputs #signupform .error{
+    /* border: 1px solid black; */
+    grid-column: 1/span 2;
+    font-size:1rem;
+    
+}
+#content-container #signupcontainer #inputs label{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 1.5rem;
+    text-align:center;
+    margin:0.5rem;
+    padding:0.5rem;
+    justify-content: center;
+}
+
+#content-container #signupcontainer #inputs input{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 1.2rem;
+    text-align:center;
+    width:auto;
+    margin:0.5rem;
+    padding:0.5rem;
+    border-radius: 1.3rem;
+    width:20rem;
+}
+#content-container #signupcontainer #inputs input#submit{
+    font-size: 1.2rem;
+    text-align:center;
+    width:98%;
+    margin:0.5rem;
+    padding:0.5rem;
+    grid-column: 1/span 2;
+    border-radius: 1.3rem;
+    background-color:black;
+    color: white;
+    font-family: 'Courgette', cursive;
+}
+#content-container #signupcontainer #inputs input#submit:hover{
+    background-color:#6E85B7;
+    color:#F8F9D7;
+}
+/* Task page */
+#content-container #taskcontent{
+    border: 2px solid black;
+    background-color:rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    width:98%;
+    min-height: 38rem;
+    border-radius: 1.3rem;
+}
+#content-container #taskcontent #createtask{
+    /* border: 2px solid black; */
+    margin: 1rem;
+    padding: 1rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+#content-container #taskcontent #createtask h2{
+    font-size: 2rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+#content-container #taskcontent #createtask .taskbtn{
+    border: 2px solid black;
+    border-radius: 1.3rem;
+    width:20%;
+    padding: 1rem 0rem;
+    background-color:black;
+    color: white;
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    text-decoration: none;
+    font-size:1.1rem;
+}
+#content-container #taskcontent #createtask .taskbtn:hover{
+    background-color:#6E85B7;
+    color:#F8F9D7;
+}
+#content-container #taskcontent #mytask{
+    /* border: 2px solid black; */
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    align-items: center
+}
+#content-container #taskcontent #mytask #tasklist{
+    font-size: 2rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+#content-container #taskcontent #mytask #tasktable{
+    border: 2px solid black;
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+/* Create Task file */
+#content-container #createtaskcontent{
+    border: 2px solid black;
+    background-color:rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    margin: 1rem;
+    padding: 1rem;
+    width: 60%;
+    height:30rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 1.3rem;
+}
+#content-container #createtaskcontent #createheading{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+#content-container #createtaskcontent #createtaskinput #createtaskform{
+    width: 51rem;
+    height: 20rem;
+    padding: 0rem 4rem;
+}
+#content-container #createtaskcontent #createtaskinput #createtaskform label{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+#content-container #createtaskcontent #createtaskinput #createtaskform label[for=desc]{
+    margin-bottom: 3rem;
+}
+#content-container #createtaskcontent #createtaskinput #createtaskform #title{
+    width:25rem;
+    padding:0.2rem;
+    margin: 0.3rem;
+    margin-left: 3rem;
+    border-radius: 1.3rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1rem;
+    text-align:center;
+}
+#content-container #createtaskcontent #createtaskinput #createtaskform #status{
+    width:25rem;
+    padding:0.2rem;
+    margin: 0.3rem;
+    margin-left: 5rem;
+    border-radius: 1.3rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1rem;
+    text-align:center;
+}
+#content-container #createtaskcontent #createtaskinput #createtaskform #desc{
+    width:25rem;
+    height:9rem;
+    padding:0.2rem;
+    margin: 0.3rem;
+    border-radius: 1.3rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1rem;
+}
+#content-container #createtaskcontent #createtaskinput #createtaskform #submit{
+    width:25rem;
+    padding:0.2rem;
+    margin: 0.3rem 8rem;
+    border-radius: 1.3rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 1.3rem;
+    background-color:black;
+    color: white;
+}
+#content-container #createtaskcontent #createtaskinput #createtaskform #submit:hover{
+    background-color:#6E85B7;
+    color:#F8F9D7;
+}
+/* Update task page */
+#content-container #updatetaskcontent{
+    border: 2px solid black;
+    background-color:rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    margin: 1rem;
+    padding: 1rem;
+    width: 60%;
+    height:30rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 1.3rem;
+}
+#content-container #updatetaskcontent #updateheading{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+#content-container #updatetaskcontent h3{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+#content-container #updatetaskcontent #updatetaskinput #updatetaskform{
+    width: 51rem;
+    height: 20rem;
+    padding: 0rem 4rem;
+}
+#content-container #updatetaskcontent #updatetaskinput #updatetaskform label{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+#content-container #updatetaskcontent #updatetaskinput #updatetaskform label[for=desc]{
+    margin-bottom: 3rem;
+}
+#content-container #updatetaskcontent #updatetaskinput #updatetaskform #title{
+    width:25rem;
+    padding:0.2rem;
+    margin: 0.3rem;
+    margin-left: 3rem;
+    border-radius: 1.3rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1rem;
+    text-align:center;
+}
+#content-container #updatetaskcontent #updatetaskinput #updatetaskform #status{
+    width:25rem;
+    padding:0.2rem;
+    margin: 0.3rem;
+    margin-left: 5rem;
+    border-radius: 1.3rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1rem;
+    text-align:center;
+}
+#content-container #updatetaskcontent #updatetaskinput #updatetaskform #desc{
+    width:25rem;
+    height:9rem;
+    padding:0.2rem;
+    margin: 0.3rem;
+    border-radius: 1.3rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1rem;
+}
+#content-container #updatetaskcontent #updatetaskinput #updatetaskform #submit{
+    width:25rem;
+    padding:0.2rem;
+    margin: 0.3rem 8rem;
+    border-radius: 1.3rem;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 1.3rem;
+    background-color:black;
+    color: white;
+}
+#content-container #updatetaskcontent #updatetaskinput #updatetaskform #submit:hover{
+    background-color:#6E85B7;
+    color:#F8F9D7;
+}

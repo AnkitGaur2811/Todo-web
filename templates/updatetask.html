@@ -1,0 +1,49 @@
+<!-- Extends base -->
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %} Update Tasks {% endblock %}
+
+<!-- Navbar btn -->
+{% block navbtn%}
+<button id="logoutbtn" class="navbtn" ><a href="{{url_for('logout')}}">Logout</a></button>
+{%endblock%}
+
+<!-- Content -->
+{%block Main_content%}
+<div id="updatetaskcontent">
+    <div id="updateheading">
+        <h2>Update Task</h2>
+    </div>
+    {% if message %}
+        <h3>{{message}}</h3>
+    {% else %}
+    <div id="updatetaskinput">
+        <form  id ="updatetaskform" action="{{url_for('update_task',taskid=todo.id)}}" method="POST">
+            <!-- Title Field -->
+            <label for="title">Title fo New Task</label>  
+            <input id="title" name="title" required type="text" value="{{todo.title}}">
+            <br>
+            <br>
+            <!-- Status Field -->
+            <label for="status">Status of Task</label>  
+            <select id="status" name="status">
+                <option value="Incomplete">Incomplete</option>
+                <option value="inprogress">inprogress</option>
+                <option value="Done">Done</option>
+            </select>
+            <br>
+            <br>
+            <!-- Desc Field -->
+            <label for="desc">Description for the task</label>  
+            <textarea id="desc" name="desc">{{todo.dese}}</textarea>
+            <br>
+            <br>
+            <!-- Submit Field -->
+            <input id="submit" name="submit" type="submit" value="Update Task">
+            <br>
+        </form>
+    {% endif %}
+    </div>
+</div>
+{%endblock%}

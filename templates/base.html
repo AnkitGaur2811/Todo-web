@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    {% block boot %}
+    {% endblock boot %}
+    <!-- Title block -->
+    <title>{% block Title%} {%endblock%}</title>  
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{{url_for('static',filename='logo.png')}}" alt="logo here" class="photo-logo">
+            <p>Todo</p>
+        </div>
+        <ul id="main-pages">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('how_use')}}">How To use</a></li>
+            <li><a href="{{url_for('about')}}">About Us</a></li>
+        </ul>
+        <ul id="btncontainer">
+            <!-- Navbar btn block -->
+            {% block navbtn%}
+            {%endblock%}
+        </ul>
+    </nav>
+    <div id="content-container">
+        <!-- Content block -->
+        {%block Main_content%}
+        {%endblock%}
+    </div>
+    <footer id="footer">
+        <h5 id="footercontent">
+            Copyright © reserved
+        </h5>
+    </footer>
+</body>
+</html>

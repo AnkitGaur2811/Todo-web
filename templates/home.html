@@ -1,0 +1,37 @@
+<!-- Extends base -->
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %} Home {% endblock %}
+
+<!-- Navbar btn -->
+{% block navbtn%}
+<button id="signupbtn" class="navbtn" ><a href="{{url_for('signup')}}">Sign up</a></button>
+<button id="loginbtn" class="navbtn" ><a href="{{url_for('login')}}">Login</a></button>
+{%endblock%}
+
+<!-- Content -->
+{%block Main_content%}
+<div id="contentbox">
+    <h3 id="heading-content">
+        Welcome to TODO list Manager
+    </h3>
+    <p class="extracontent">
+        Using This website you can Create, View, Update, and Delete the Tasks in Your personal Todo list. This will help you to increase your effecency and reduce guilt of procastination.
+    </p>
+    <div id="button-container">
+        <button id="registerbtn" class="homebtn">
+            <a href="{{url_for('signup')}}" class="register">
+                New User Registeration
+            </a>
+        </button>
+        <p id="or">OR</p>
+        <button id="enterbtn" class="homebtn">
+            <a href="{{url_for('login')}}" class="register">
+                Existing User Login
+            </a>
+        </button>
+    </div>
+</div>
+{%endblock%}
+

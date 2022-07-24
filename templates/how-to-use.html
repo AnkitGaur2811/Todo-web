@@ -1,0 +1,40 @@
+<!-- Extends base -->
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %} About US {% endblock %}
+
+<!-- Navbar btn -->
+{% block navbtn%}
+{% if message %}
+    <button id="logoutbtn" class="navbtn" ><a href="{{url_for('logout')}}">Logout</a></button>
+{% else %}
+    <button id="signupbtn" class="navbtn" ><a href="{{url_for('signup')}}">Sign up</a></button>
+    <button id="loginbtn" class="navbtn" ><a href="{{url_for('login')}}">Login</a></button>
+{% endif %}
+{%endblock%}
+
+<!-- Content -->
+{%block Main_content%}
+<div id="how-to-usecontainer">
+    <h2 id="heading">How to Use Todo list Manger</h2>
+    <div id="cardcontainer">
+        <div id="createaccout" class="card">
+            <img src="{{url_for('static',filename='createaccount.png')}}" alt="createaccount" id="createacc" class="cardimg">
+            <h4 id="createacchead" class="cardhead">Create Account</h4>
+            <p class="cardcontent">If you don't have a account yet create a free account on this website by going to sign up option on top right corner of website and start your journey with us </p>
+        </div>
+        <div id="createtask" class="card">
+            <img src="{{url_for('static',filename='createtask.png')}}" alt="createaccount" id="createacc" class="cardimg">
+            <h4 id="createacchead" class="cardhead">Create Task</h4>
+            <p class="cardcontent">Once you create your account goto home page there you can add new task to your list and view them at the same time. </p>
+        </div>
+        <div id="update-n-deletetask" class="card">
+            <img src="{{url_for('static',filename='updatetask.png')}}" alt="createaccount" id="createacc" class="cardimg">
+            <h4 id="createacchead" class="cardhead">Update and Delete Task</h4>
+            <p class="cardcontent">You can update the task time to time if you think something is off and mark it as Done, Inprogress, or Incomplete. Also you can delete unwanted task for ease of access.</p>
+        </div>
+    </div>
+    
+</div>
+{%endblock%}

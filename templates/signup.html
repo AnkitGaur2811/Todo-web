@@ -1,0 +1,72 @@
+<!-- Extends base -->
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %} Signup {% endblock %}
+
+<!-- Navbar btn -->
+{% block navbtn%}
+<button id="loginbtn" class="navbtn" ><a href="{{url_for('login')}}">Login</a></button>
+{%endblock%}
+
+<!-- Content -->
+{%block Main_content%}
+<div id="signupcontainer">
+    <div id="heading">
+        <h2>Register</h2>
+    </div>
+    <div id="inputs">
+        {% if message %}
+            <h6>{{message}}</h6>
+        {% endif %}
+        {% if form %}
+        <form  id ="signupform" action="{{url_for('signup')}}" method="POST">
+            <!-- Fullname Field -->
+            {{form.fullname.label}}  {{form.fullname}}<br>
+            {% if form.fullname.errors %}
+                {% for error in form.fullname.errors %}
+                    <h6 class="error">{{error}}</h6>
+                {% endfor %}
+            {% endif %}
+            <br>
+            <!-- Email Field -->
+            {{form.email.label}}  {{form.email}}<br>
+            {% if form.email.errors %}
+                {% for error in form.email.errors %}
+                    <h6 class="error">{{error}}</h6>
+                {% endfor %}
+            {% endif %}
+            <br>
+            <!-- Phone Field -->
+            {{form.phone.label}}  {{form.phone}}<br>
+            {% if form.phone.errors %}
+                {% for error in form.phone.errors %}
+                    <h6 class="error">{{error}}</h6>
+                {% endfor %}
+            {% endif %}
+            <br>
+            <!-- Password Field -->
+            {{form.password.label}}  {{form.password}}<br>
+            {% if form.password.errors %}
+                {% for error in form.password.errors %}
+                    <h6 class="error">{{error}}</h6>
+                {% endfor %}
+            {% endif %}
+            <br>
+            <!-- Confirm Password Field -->
+            {{form.confirm_password.label}}  {{form.confirm_password}}<br>
+            {% if form.confirm_password.errors %}
+                {% for error in form.confirm_password.errors %}
+                    <h6 class="error">{{error}}</h6>
+                {% endfor %}
+            {% endif %}
+            <br>
+            <!-- Submit Field -->
+            {{form.csrf_token}}
+            {{form.submit}}
+            <br>
+        </form>
+        {% endif %}
+    </div>
+</div>
+{%endblock%}

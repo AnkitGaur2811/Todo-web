@@ -1,0 +1,41 @@
+<!-- Extends base -->
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %} About US {% endblock %}
+
+<!-- Navbar btn -->
+{% block navbtn%}
+{% if message %}
+    <button id="logoutbtn" class="navbtn" ><a href="{{url_for('logout')}}">Logout</a></button>
+{% else %}
+    <button id="signupbtn" class="navbtn" ><a href="{{url_for('signup')}}">Sign up</a></button>
+    <button id="loginbtn" class="navbtn" ><a href="{{url_for('login')}}">Login</a></button>
+{% endif %}
+{%endblock%}
+
+<!-- Content -->
+{%block Main_content%}
+<div id="aboutcontent">
+    <h2 id="aboutheading">
+        About Us
+    </h2>
+    <p id="mainabout">
+        Hi, I am <strong>Ankit Gaur</strong> Final year engneering Student at Bhagwan Parshuram Institute of Technology(GGSIPU). This is a hobby project of mine this project is made by using basic HTML, CSS, JavaScript, Jinja(Templating engine), Flask(As backend) and Sqlite(As Database). By making this project I learnt new concepts such as Authentication, Session mangeing, Routeing etc.<br> Hope you like the project. 
+    </p>
+    <div id="contactinfo">
+        <div id="linkedin">
+            <p class="head">LinkedIn :</p>
+            <a class="cont"href="https://www.linkedin.com/in/ankit--gaur/">ankit--gaur</a>
+        </div>
+        <div id="github">
+            <p class="head">Github :</p>
+            <a class="cont" href="https://github.com/AnkitGaur2811">AnkitGaur2811</a>
+        </div>
+        <div id="email">
+            <p class="head">Email :</p>
+            <a class="cont" href="mailto: ankitgaur1460@gmail.com">ankitgaur1460@gmail.com</a>
+        </div>
+    </div>
+</div>
+{%endblock%}
