@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY']="orange01ankitgaur01"
 # ------------------------------ Db related variables ----------------------------------
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://chaguzhlybgjqg:4b1e2a6f0268bbec9216eda99239d709499c2bd55f60ccfd83b495e3a8db1d65@ec2-107-22-122-106.compute-1.amazonaws.com:5432/d1i7tc3alt04to'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://chaguzhlybgjqg:4b1e2a6f0268bbec9216eda99239d709499c2bd55f60ccfd83b495e3a8db1d65@ec2-107-22-122-106.compute-1.amazonaws.com:5432/d1i7tc3alt04to'
 db = SQLAlchemy(app)
 
 
