@@ -20,7 +20,7 @@ class tasks(db.Model):
     title = db.Column(db.String)
     dese = db.Column(db.String)
     status = db.Column(db.String)
-    made_by = db.Column(db.String, db.ForeignKey('user.id'))
+    made_by = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self) -> str:
         return f"{self.id } - {self.title} - {self.status} - {self.dese}"
